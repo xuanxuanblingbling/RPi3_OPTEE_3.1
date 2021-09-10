@@ -29,7 +29,7 @@ LOC="$OPTEE_ROOT/gen_rootfs/filesystem.cpio.gz"
 sudo gunzip -cd $LOC | sudo cpio -iudmv "boot/*"
 
 LOC="$OPTEE_ROOT/module_output/lib/*"
-sudo cp -r $LOC rootfs/lib/
+sudo cp -rL $LOC rootfs/lib/
 
 LOC="$OPTEE_ROOT/optee_client/out/export/*"
 sudo cp -r $LOC rootfs/
